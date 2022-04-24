@@ -6,7 +6,7 @@ const modalInner = document.querySelector('.modal__inner');
 const createButtonModalClose = () => {
   const buttonClose = document.createElement('div');
   buttonClose.classList.add('button__close');
-  buttonClose.innerHTML = 'X';
+  buttonClose.innerHTML = 'x';
   modalInner.prepend(buttonClose);
   modalInner.style.position = 'relative';
   buttonClose.style.cssText = `
@@ -14,7 +14,7 @@ const createButtonModalClose = () => {
     position:absolute; 
     display:inline; 
     padding:10px; 
-    top:10px; 
+    top:3px; 
     right:10px; 
     cursor:pointer;
 `;
