@@ -1,3 +1,4 @@
+const modal = () => {
 const modalButtonApplication = document.querySelector('.modal__button');
 const modalButtonCourse = document.querySelector('.course__button');
 const modal = document.querySelector('.modal');
@@ -22,9 +23,9 @@ const createButtonModalClose = () => {
 
 createButtonModalClose();
 
-const escKeydown = (evt, el) => {
-  evt.preventDefault(); 
+const escKeydown = (evt, el) => {  
   if (evt.key  === 'Esc' || evt.key  === 'Escape') {
+    evt.preventDefault(); 
     el.style.display = '';
   }
   document.removeEventListener('keydown', (evt) => {
@@ -66,5 +67,6 @@ modal.addEventListener('click', (evt) => {
     modal.style.display = '';
   }
 })
+}
 
-
+modal()

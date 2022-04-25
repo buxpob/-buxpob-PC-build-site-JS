@@ -1,3 +1,5 @@
+const timer = () => {
+  const timeBlock = document.querySelector('.timer');
 const daysBlock = document.querySelector('.timer__days');
 const hoursBlock = document.querySelector('.timer__hours');
 const minutesBlock = document.querySelector('.timer__minutes');
@@ -18,7 +20,7 @@ const numWord = (value, words) => {
 
 const updateTimer = () => {
   const date = new Date();
-  const dateDeadline = new Date('28 april 2022').getTime();
+  const dateDeadline = new Date('15 may 2022').getTime();
   const timeRemaning = (dateDeadline - date)/1000;
 
   const days = Math.floor(timeRemaning / 60 / 60 / 24);
@@ -47,12 +49,13 @@ const updateTimer = () => {
     hoursBlock.textContent = '00';
     minutesBlock.textContent = '00';
     secondsBlock.textContent = '00';
-    daysBlock.style.color = 'red';
-    hoursBlock.style.color = 'red';
-    minutesBlock.style.color = 'red';
-    secondsBlock.style.color = 'red';
+    
+    timeBlock.style.color = 'red';
   }
 }
 
 updateTimer();
 interval = setInterval(updateTimer, 500);
+}
+
+timer();
